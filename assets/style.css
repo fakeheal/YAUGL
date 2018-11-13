@@ -1,0 +1,126 @@
+body {
+    position: relative;
+    padding: 40px 0;
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+    background: url(img/background.png) center center no-repeat;
+    background-size: cover;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1; /* Ensure div tag stays behind content; -999 might work, too. */
+}
+
+#background img {
+    width: 100%;
+    height: 100%;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+#logo {
+    background: rgba(0, 0, 0, 0.6);
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#launchers-hub {
+    width: 550px;
+    margin: 10vh auto 0 auto;
+    list-style: none;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 0;
+}
+
+#launchers-hub:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#launchers-hub li {
+    display: block;
+    float: left;
+    height: 80px;
+    width: 90px;
+    border-bottom: 5px solid rgba(43, 237, 230, 0.20);
+    text-align: center;
+    margin-right: 2px;
+}
+
+#launchers-hub li:last-child {
+    margin-right: 0;
+}
+
+#launchers-hub li a {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    position: relative;
+}
+
+#launchers-hub li a .add {
+    color: #4fe38b;
+    border: 2px solid #4fe38b;
+    border-radius: 20px;
+    padding: 3px 20px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 100;
+    left: 13px;
+    top: 29px;
+}
+
+#launchers-hub li a img {
+    vertical-align: middle;
+    opacity: 0.35;
+    position: absolute;
+    z-index: 99;
+    left: 20px;
+    top: 17px;
+    filter: grayscale(100%);
+}
+
+#launchers-hub li.active {
+    border-bottom: 5px solid rgba(43, 237, 230, 0.8);
+}
+
+#launchers-hub li.active a {
+    position: static;
+    line-height: 80px;
+}
+
+#launchers-hub li.active .add {
+    display: none;
+}
+
+#launchers-hub li.active a img {
+    opacity: 1;
+    position: static;
+    filter: none;
+}
+
+#youtube-video {
+    width: 550px;
+    margin: 0 auto;
+}
+
+#youtube-video-title {
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(43, 237, 230, 0.20);
+    margin-top: -5px;
+}
